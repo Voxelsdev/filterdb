@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Row, Col, Button } from 'react-materialize'
+import Main from './Main';
+import Sidebar from './Sidebar';
 
-class App extends React.Component {
+export default class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      person: {},
+    };
+  }
+
   render() {
     return (
-      <h1>Yo</h1>
-    )
+      <Row>
+        <Col s={3}>
+          <Sidebar></Sidebar>
+        </Col>
+        <Col s={9}>
+          <Main></Main>
+        </Col>
+      </Row>
+    );
   }
 }
-
-export default App;
