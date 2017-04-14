@@ -8,15 +8,21 @@ export default class App extends Component {
     super();
 
     this.state = {
-      person: {},
+      selection: {},
     };
+
+    this.handleResultSelect = this.handleResultSelect.bind(this);
+  }
+
+  handleResultSelect(selection) {
+    this.setState({ selection });
   }
 
   render() {
     return (
       <Row>
         <Col s={3}>
-          <Sidebar></Sidebar>
+          <Sidebar onResultSelect={this.handleResultSelect}></Sidebar>
         </Col>
         <Col s={9}>
           <Main></Main>

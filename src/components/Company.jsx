@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Button } from 'react-materialize';
 
-export default class Person extends Component {
+export default class Company extends Component {
   render() {
     return (
       <Row>
@@ -9,7 +9,7 @@ export default class Person extends Component {
           {this.props.info.name}
         </Row>
         <Row>
-          {this.props.info.company}
+          {this.props.info.city}, {this.props.info.state}
         </Row>
       </Row>
     );

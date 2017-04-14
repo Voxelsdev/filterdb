@@ -86,8 +86,9 @@ export default class Sidebar extends Component {
                   onChange={this.setProduct}/>
           </div>
         </Row>
-        {this.state.searchResults.map((pers, i) => {
-          return (<Person info={pers} key={i}></Person>);
+        {this.state.searchResults.map((res, i) => {
+          return !this.state.searchType ? (<Company info={res} key={i}></Company>) :
+            (<Person info={res} key={i}></Person>);
         })}
       </div>
     );
